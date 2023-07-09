@@ -1,0 +1,28 @@
+server:
+  port: 8888
+  
+  
+management:
+  endpoints:
+    web:
+      exposure:
+        include:
+        - "*"
+spring:
+  application:
+    name: config-server
+  cloud:
+    config:
+      server:
+        git:
+          uri: https://github.com/karamjitsehdev1980/HRMS-MASTER.git
+          skip-ssl-validation: true
+          ignore-local-ssh-settings: true
+          username: karamjitsehdev1980
+          password: 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
+          #private-key: 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
+          default-label: master
+              
+#  profiles:
+#    active:
+#    - prod   
