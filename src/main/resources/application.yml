@@ -19,10 +19,20 @@ spring:
           skip-ssl-validation: true
           ignore-local-ssh-settings: true
           username: karamjitsehdev1980
-          password: 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
+          password: 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
           #private-key: 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
-          default-label: master
+          #default-label: main
               
 #  profiles:
 #    active:
-#    - prod   
+#    - prod
+
+
+eureka:
+  instance:
+    hostname: localhost
+  client:
+    fetch-registry: false
+    register-with-eureka: true    
+    service-url:
+      defaultZone: http://localhost:8761/eureka
